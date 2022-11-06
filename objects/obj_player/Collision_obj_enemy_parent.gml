@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
-event_inherited();
+instance_destroy()
+obj_game.alarm[0] = 120
 
-cur_health = 100

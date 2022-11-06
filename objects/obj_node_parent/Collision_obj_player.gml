@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
-event_inherited();
+audio_play_sound(audio, 10, false)
 
-cur_health = 100
+instance_destroy()

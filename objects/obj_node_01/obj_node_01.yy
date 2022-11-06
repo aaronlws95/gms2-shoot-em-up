@@ -1,17 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bullet",
+  "name": "obj_node_01",
   "spriteId": {
-    "name": "sp_bullet",
-    "path": "sprites/sp_bullet/sp_bullet.yy",
+    "name": "sp_node_01",
+    "path": "sprites/sp_node_01/sp_node_01.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_node_parent",
+    "path": "objects/obj_node_parent/obj_node_parent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -30,7 +33,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Node",
+    "path": "folders/Objects/Node.yy",
   },
 }

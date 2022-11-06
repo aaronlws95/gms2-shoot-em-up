@@ -3,5 +3,5 @@
 
 music = snd_room_1
 
-audio_play_sound(music, 100, false)
+music_id = audio_play_sound(music, 100, false)
 

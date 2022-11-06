@@ -31,16 +31,16 @@ if mouse_check_button(mb_right)
 		instance_create_layer(x, y, "Instances", obj_laser);
 	}
 	
-	if !audio_is_playing(snd_shoot_rmb)
+	if !audio_is_playing(snd_shoot_laser)
 	{
-		audio_play_sound(snd_shoot_rmb, 10, false);
+		audio_play_sound(snd_shoot_laser, 10, true);
 	}
 }
 
 else if mouse_check_button_pressed(mb_left)
 {
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	audio_play_sound(snd_shoot_lmb, 10, false);
+	audio_play_sound(snd_shoot_bullet, 10, false);
 }
 
 else if not mouse_check_button(mb_right)
@@ -52,4 +52,9 @@ else if not mouse_check_button(mb_right)
 			instance_destroy()
 		}
 	}
+	
+	if audio_is_playing(snd_shoot_laser)
+	{
+		audio_stop_sound(snd_shoot_laser);
+	}	
 }

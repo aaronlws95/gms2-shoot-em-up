@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_room_1",
+  "name": "snd_shoot_laser",
   "conversionMode": 0,
   "compression": 0,
   "type": 0,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_room_1.mp3",
-  "duration": 170.08325,
+  "soundFile": "snd_shoot_laser.ogg",
+  "duration": 0.523084,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds/Sounds.yy",
   },
 }

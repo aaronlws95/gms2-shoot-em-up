@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_shoot_lmb",
+  "name": "snd_node_01",
   "conversionMode": 0,
   "compression": 0,
   "type": 0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_shoot_lmb.ogg",
-  "duration": 0.479025,
+  "soundFile": "snd_node_01.ogg",
+  "duration": 0.395011,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds/Sounds.yy",

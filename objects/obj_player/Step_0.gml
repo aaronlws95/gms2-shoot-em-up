@@ -37,11 +37,27 @@ if mouse_check_button(mb_right)
 	}
 }
 
-else if mouse_check_button_pressed(mb_left)
-{
-	instance_create_layer(x, y, "Instances", obj_bullet);
-	audio_play_sound(snd_shoot_bullet, 10, false);
-}
+//else if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
+//{
+//	if has_shot_this_beat
+//	{
+//		return	
+//	}
+	
+//	hit_position = (song_position - last_beat) / obj_conductor.crotchet
+//	if hit_position > 0.5
+//	{
+//		hit_position = 1 - hit_position	
+//	}
+//	show_debug_message(string(hit_position))
+//	if (hit_position < 0.3)
+//	{
+//		instance_create_layer(x, y, "Instances", obj_bullet);
+//		audio_play_sound(snd_shoot_bullet, 10, false);
+//	}
+	
+//	has_shot_this_beat = true
+//}
 
 else if not mouse_check_button(mb_right)
 {

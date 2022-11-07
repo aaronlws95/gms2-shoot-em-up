@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-new_song(snd_fractal_dream, 30, 0)
-
-instance_destroy()
+depth = 10
+//image_alpha = 0.5
+beats_shown_in_advance = 10
+prev_x = x

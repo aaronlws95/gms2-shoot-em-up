@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_room_controller",
+  "name": "obj_conductor",
   "spriteId": null,
   "solid": false,
   "visible": true,

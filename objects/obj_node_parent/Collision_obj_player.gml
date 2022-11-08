@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-audio_play_sound(audio, 10, false)
+new_song(snd_fractal_dream, 117, 0)
 
 instance_destroy()

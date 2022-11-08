@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_beat_node_01",
+  "name": "obj_beat_line_01",
   "spriteId": {
-    "name": "sp_beat_node_01",
-    "path": "sprites/sp_beat_node_01/sp_beat_node_01.yy",
+    "name": "sp_beat_line_01",
+    "path": "sprites/sp_beat_line_01/sp_beat_line_01.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,11 +26,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Beat Indicator",
+    "path": "folders/Objects/Beat Indicator.yy",
   },
 }

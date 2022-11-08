@@ -1,19 +1,20 @@
-function generate_beat_line(beat_idx){
-	spawn_dist = 1000
+function generate_beat_line(beat_idx, spawn_dist, beats_in_advance){
 	spawn_right = obj_beat_target.x + spawn_dist
 	spawn_left = obj_beat_target.x - spawn_dist
 	instance_create_layer(spawn_right, obj_beat_target.y, "Instances", obj_beat_line_01, 
 							{
 								spawn: spawn_right,
 								target: obj_beat_target.x,  
-								beat_idx: beat_idx
+								beat_idx: beat_idx,
+								beats_in_advance: beats_in_advance
 							});		
-	//instance_create_layer(spawn_left, obj_beat_target.y, "Instances", obj_beat_line_01, 
-	//						{
-	//							spawn: spawn_left,
-	//							target: obj_beat_target.x,  
-	//							beat_idx: beat_idx
-	//						});		
+	instance_create_layer(spawn_left, obj_beat_target.y, "Instances", obj_beat_line_01, 
+							{
+								spawn: spawn_left,
+								target: obj_beat_target.x,  
+								beat_idx: beat_idx,
+								beats_in_advance: beats_in_advance
+							});		
 }
 
 //function initialize_beat_lines(beat_node_speed, n){

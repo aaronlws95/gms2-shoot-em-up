@@ -3,29 +3,19 @@
 song_position = get_song_position()
 song_pos_in_beats = song_position / crotchet
 
-if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
-{
-	if has_shot_this_beat
-	{
-		return	
-	}
+//if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
+//{
+
+//	hit_position = (song_position - last_beat) / obj_conductor.crotchet
+//	//show_debug_message(string(hit_position))
 	
-	hit_position = (song_position - last_beat) / obj_conductor.crotchet
-	if hit_position > 0.5
-	{
-		hit_position = 1 - hit_position	
-	}
-	//show_debug_message(string(hit_position))
-	
-	if (hit_position < 0.5)
-	{
-		show_debug_message(beat_ctr)
-		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
-		audio_play_sound(snd_shoot_bullet, 10, false);
-	}
+//	if (hit_position < 0.8)
+//	{
+//		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
+//		audio_play_sound(snd_shoot_bullet, 10, false);
+//	}
 		
-	has_shot_this_beat = true
-}
+//}
 
 if (song_position <= last_beat + crotchet)
 {
@@ -33,11 +23,19 @@ if (song_position <= last_beat + crotchet)
 }
 
 
+
 last_beat += crotchet
 
-has_shot_this_beat = false
+beats_in_advance = 5
+if beat_ctr < beats_in_advance
+{
+	generate_beat_line(beat_ctr, beat_ctr*100 + 500, beats_in_advance)	
+}
+else 
+{
+	generate_beat_line(beat_ctr, 5*100 + 500, beats_in_advance)	
+}
 
-generate_beat_line(beat_ctr)
 
 
 if beat_ctr % 10 == 0 

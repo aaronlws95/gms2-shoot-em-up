@@ -11,5 +11,3 @@ song_pos_in_beats = 0
 new_song(song_id, bpm, offset)
 
 beat_ctr = 0
-
-has_shot_this_beat = false

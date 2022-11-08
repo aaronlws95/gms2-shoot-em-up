@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-move_speed = 5
-last_beat = 0
-has_shot = false
+depth = 9
+last_beat = 0 

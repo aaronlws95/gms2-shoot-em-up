@@ -40,11 +40,7 @@ else
 
 if beat_ctr % 10 == 0 
 {
-	min_height = 0 + 8
-	max_height = room_height - 8
-	y_spawn = random_range(min_height, max_height)
-	x_spawn = room_width + 16
-	instance_create_layer(x_spawn, y_spawn, "Instances", obj_enemy_01);				
+	spawn_enemy()
 }
 
 beat_ctr += 1

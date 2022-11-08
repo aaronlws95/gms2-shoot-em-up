@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_laser",
-  "spriteId": null,
+  "name": "obj_beat_line_02",
+  "spriteId": {
+    "name": "sp_beat_line_01",
+    "path": "sprites/sp_beat_line_01/sp_beat_line_01.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,12 +27,11 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Deprecated",
-    "path": "folders/Objects/Deprecated.yy",
+    "name": "Beat Indicator",
+    "path": "folders/Objects/Beat Indicator.yy",
   },
 }

@@ -8,7 +8,7 @@ function generate_beat_line(beat_idx, spawn_dist, beats_in_advance){
 								beat_idx: beat_idx,
 								beats_in_advance: beats_in_advance
 							});		
-	instance_create_layer(spawn_left, obj_beat_target.y, "Instances", obj_beat_line_01, 
+	instance_create_layer(spawn_left, obj_beat_target.y, "Instances", obj_beat_line_02, 
 							{
 								spawn: spawn_left,
 								target: obj_beat_target.x,  
@@ -17,23 +17,44 @@ function generate_beat_line(beat_idx, spawn_dist, beats_in_advance){
 							});		
 }
 
-//function initialize_beat_lines(beat_node_speed, n){
-//		for (i = 1; i <= n; i ++) 
-//		{
-//			generate_beat_line(beat_node_speed, i)
-//		}
-//}
+function get_hit_score(obj, target)
+{
+	hit_score = (abs(obj - target) * 2 ) / obj_beat_target.sprite_width
+	return hit_score
+}
 
-//function generate_beat_line(beat_node_speed, dist_from_target){
-//	pixel_per_beat = game_get_speed(gamespeed_fps) * crotchet * beat_node_speed
-//	beat_node_x_right = obj_beat_target.x + dist_from_target * pixel_per_beat
-//	beat_node_x_left = obj_beat_target.x - dist_from_target * pixel_per_beat
-//	instance_create_layer(beat_node_x_right, obj_beat_target.y, "Instances", obj_beat_line_01, 
-//							{
-//								speed: -beat_node_speed
-//							});		
-//	instance_create_layer(beat_node_x_left, obj_beat_target.y, "Instances", obj_beat_line_01, 
-//							{
-//								speed: beat_node_speed
-//							});		
-//}
+function handle_hit(hit_score)
+{
+	text_properties = {
+		text: "",
+		color: c_white,
+	}
+
+	if hit_score < 0.25
+	{
+		text_properties.text = "Awesome!"
+		text_properties.color = c_white
+	}
+	
+	else if hit_score < 0.5
+	{
+		text_properties.text = "Nice!"
+		text_properties.color = c_purple		
+	}	
+	
+	else if hit_score < 0.75
+	{
+		text_properties.text = "Ok"
+		text_properties.color = c_green		
+	}		
+	
+	else if hit_score > 1
+	{
+		text_properties.text = "Miss"
+		text_properties.color = c_red		
+	}
+	
+	text_inst = instance_create_layer(obj_beat_target.x, obj_beat_target.y, "Instances", obj_hit_beat_pop, text_properties);		
+
+	text_inst.alarm[0] = (obj_conductor.last_beat + obj_conductor.crotchet) - obj_conductor.song_position
+}

@@ -21,12 +21,13 @@ if keyboard_check(ord("D")) or keyboard_check(vk_right)
 	x += move_speed;
 }
 
+max_height = obj_beat_target.bbox_top 
 x = clamp(x, 0 + sprite_get_width(sprite_index) / 2, room_width - sprite_get_width(sprite_index) / 2);
-y = clamp(y, 0 + sprite_get_height(sprite_index) / 2, room_height - sprite_get_height(sprite_index) / 2);
+y = clamp(y, 0 + sprite_get_height(sprite_index) / 2, max_height - sprite_get_height(sprite_index) / 2);
 
 if (obj_conductor.song_position > last_beat + obj_conductor.crotchet)
 {
-	last_beat += obj_conductor.crotchet
+	last_beat += obj_conductor.crotchet;
 }
 
 if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
@@ -34,22 +35,29 @@ if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
 	with obj_beat_line_01
 	{
 		if place_meeting(x, y, obj_beat_target)
-		{
-			instance_destroy()
-			instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
-			audio_play_sound(snd_shoot_bullet, 10, false);			
+		{			
+			instance_destroy();
+	
+			hit_score = get_hit_score(x, obj_beat_target.x)
+			handle_hit(hit_score)
+			shoot(hit_score)
+			obj_player.has_shot = true
 		}
 	}
-	//hit_position = (obj_conductor.song_position - last_beat) / obj_conductor.crotchet
-	//if hit_position > 0.5
-	//{
-	//	hit_position = 1 - hit_position	
-	//}
-	//show_debug_message(string(hit_position))
-	//if (hit_position < 0.3)
-	//{
-
-	//}
+	with obj_beat_line_02
+	{	
+		if place_meeting(x, y, obj_beat_target)
+		{	
+			instance_destroy()
+		}
+	}
+	
+	if not has_shot
+	{
+		handle_hit(100)	
+	}
+	
+	has_shot = false
 }
 
 //if mouse_check_button(mb_right)

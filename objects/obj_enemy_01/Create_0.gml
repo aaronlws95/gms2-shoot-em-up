@@ -1,7 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+_hp = 5;
+_h_speed = 2;
 
-// Inherit the parent event
-event_inherited();
-
-cur_health = 100
+_flash_color = c_white;
+_flash_alpha = 0;

@@ -1,6 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+_v_speed = 2;
+_h_speed = 2;
+_can_shoot = true;
 
-move_speed = 5
-last_beat = 0
-has_shot = false
+bullet_obj = obj_bullet_01;

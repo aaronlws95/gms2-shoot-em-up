@@ -25,7 +25,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullet",
-    "path": "folders/Objects/Bullet.yy",
+    "name": "Bullets",
+    "path": "folders/Objects/Bullets.yy",
   },
 }

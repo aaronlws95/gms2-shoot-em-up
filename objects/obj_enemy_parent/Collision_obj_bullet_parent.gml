@@ -1,6 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
+_flash_alpha = 1;
+_hp -= other.damage;
 
-hit(other.damage)
-instance_destroy(other)
+instance_destroy(other);
 
+if _hp <= 0 {
+	instance_destroy();		
+}

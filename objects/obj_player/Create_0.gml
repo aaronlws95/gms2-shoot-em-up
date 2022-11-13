@@ -8,3 +8,4 @@ _accel = _max_speed / 4;
 _can_shoot = true;
 
 bullet_obj = obj_bullet_01;
+bullet_level = 2

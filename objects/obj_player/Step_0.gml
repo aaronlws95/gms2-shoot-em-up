@@ -2,15 +2,14 @@
 x = clamp(x, sprite_width, room_width-sprite_width)
 y = clamp(y, sprite_height, room_height-sprite_height)
 image_angle = point_direction(x, y, mouse_x, mouse_y)
-direction = image_angle
 
 var _up, _down, _left, _right, _shoot;
 
-_up = keyboard_check(ord("W"));
-_down = keyboard_check(ord("S"));
-_right = keyboard_check(ord("D"));
-_left = keyboard_check(ord("A"));
-_shoot = mouse_check_button_pressed(mb_left)
+_up = keyboard_check(ord("W")) or keyboard_check(vk_up);
+_down = keyboard_check(ord("S")) or keyboard_check(vk_down);
+_right = keyboard_check(ord("D")) or keyboard_check(vk_right);
+_left = keyboard_check(ord("A")) or keyboard_check(vk_left);
+_shoot = mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space);
 _h_move = _right - _left;
 _v_move = _down - _up;
 _diag = (_up or _down) and (_left or _right)
@@ -43,12 +42,11 @@ x += _h_speed
 y += _v_speed
 #endregion
 
+direction = image_angle
 
 if _shoot and _can_shoot {
-	bullet_inst = instance_create_layer(x + lengthdir_x(sprite_width/2,direction), y, "Instances", bullet_obj, {
-		direction: image_angle
-		});	
-	alarm[0] = bullet_inst.shoot_delay;
+	shoot(x + lengthdir_x(sprite_width/2,direction), y, image_angle, bullet_obj, bullet_level)
+	alarm[0] = bullet_obj.shoot_delay;
 	_can_shoot = false;
 }
 

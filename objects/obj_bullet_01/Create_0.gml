@@ -1,4 +1,6 @@
 _h_speed = 8;
+_v_speed = 8;
+
 damage = 1;
 shoot_delay = 10
 

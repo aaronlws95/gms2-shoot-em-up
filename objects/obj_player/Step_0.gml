@@ -8,28 +8,32 @@ var _up, _down, _left, _right, _shoot;
 
 _up = keyboard_check(ord("W"));
 _down = keyboard_check(ord("S"));
-_right = keyboard_check(ord("A"));
-_left = keyboard_check(ord("D"));
+_right = keyboard_check(ord("D"));
+_left = keyboard_check(ord("A"));
 _shoot = mouse_check_button_pressed(mb_left)
 
 if _up {
-	x += lengthdir_x(_v_speed,direction);
-	y += lengthdir_y(_v_speed,direction);
+	y -= _v_speed
+	//x += lengthdir_x(_v_speed,direction);
+	//y += lengthdir_y(_v_speed,direction);
 }
 
 if _down {
-	x -= lengthdir_x(_v_speed,direction);
-	y -= lengthdir_y(_v_speed,direction);
+	y += _v_speed
+	//x -= lengthdir_x(_v_speed,direction);
+	//y -= lengthdir_y(_v_speed,direction);
 }
 
 if _right {
-	x += lengthdir_x(_h_speed,direction + 90);
-	y += lengthdir_y(_h_speed,direction + 90);
+	x += _h_speed
+	//x += lengthdir_x(_h_speed,direction + 90);
+	//y += lengthdir_y(_h_speed,direction + 90);
 }
 
 if _left {
-	x += lengthdir_x(_h_speed,direction - 90);
-	y += lengthdir_y(_h_speed,direction - 90);
+	x -= _h_speed
+	//x += lengthdir_x(_h_speed,direction - 90);
+	//y += lengthdir_y(_h_speed,direction - 90);
 }
 
 

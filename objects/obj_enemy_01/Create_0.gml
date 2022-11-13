@@ -3,3 +3,5 @@ _h_speed = 2;
 
 _flash_color = c_white;
 _flash_alpha = 0;
+
+event_inherited();

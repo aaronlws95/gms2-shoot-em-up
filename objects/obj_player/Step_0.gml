@@ -11,31 +11,37 @@ _down = keyboard_check(ord("S"));
 _right = keyboard_check(ord("D"));
 _left = keyboard_check(ord("A"));
 _shoot = mouse_check_button_pressed(mb_left)
+_h_move = _right - _left;
+_v_move = _down - _up;
+_diag = (_up or _down) and (_left or _right)
 
-if _up {
-	y -= _v_speed
-	//x += lengthdir_x(_v_speed,direction);
-	//y += lengthdir_y(_v_speed,direction);
+#region Movement control
+
+if _h_move != 0 {
+	_h_speed += _h_move*_accel;
+	_h_speed = clamp(_h_speed, -_max_speed, _max_speed)
+}
+else {
+	_h_speed = lerp(_h_speed, 0, _accel)	
 }
 
-if _down {
-	y += _v_speed
-	//x -= lengthdir_x(_v_speed,direction);
-	//y -= lengthdir_y(_v_speed,direction);
+if _v_move != 0 {
+	_v_speed += _v_move*_accel;
+	_v_speed = clamp(_v_speed, -_max_speed, _max_speed)
+}
+else {
+	_v_speed = lerp(_v_speed, 0, _accel)	
 }
 
-if _right {
-	x += _h_speed
-	//x += lengthdir_x(_h_speed,direction + 90);
-	//y += lengthdir_y(_h_speed,direction + 90);
+if _diag {
+	_diag_speed = 0.70710678118 // sqrt(_max_speed)/_max_speed
+	_h_speed *= _diag_speed;
+	_v_speed *= _diag_speed;
 }
 
-if _left {
-	x -= _h_speed
-	//x += lengthdir_x(_h_speed,direction - 90);
-	//y += lengthdir_y(_h_speed,direction - 90);
-}
-
+x += _h_speed
+y += _v_speed
+#endregion
 
 
 if _shoot and _can_shoot {

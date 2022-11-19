@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bullet_crescent",
+  "name": "obj_bullet_01_pickup",
   "spriteId": {
-    "name": "sp_bullet_crescent",
-    "path": "sprites/sp_bullet_crescent/sp_bullet_crescent.yy",
+    "name": "sp_bullet_01",
+    "path": "sprites/sp_bullet_01/sp_bullet_01.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_bullet_parent",
-    "path": "objects/obj_bullet_parent/obj_bullet_parent.yy",
+    "name": "obj_bullet_pickup_parent",
+    "path": "objects/obj_bullet_pickup_parent/obj_bullet_pickup_parent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,15 +28,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Objects/Bullets.yy",
+    "name": "Bullet Pickup",
+    "path": "folders/Objects/Bullet Pickup.yy",
   },
 }

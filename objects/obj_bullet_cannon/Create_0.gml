@@ -10,3 +10,5 @@ effect_create_below(ef_smoke, x, y, 0.05, c_dkgray);
 audio_play_sound(snd_shoot_bullet_01, 10, false);
 
 alarm[0] = 180
+
+event_inherited()

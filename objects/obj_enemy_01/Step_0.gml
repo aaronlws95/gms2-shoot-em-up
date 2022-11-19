@@ -1,6 +1,6 @@
 x -= _h_speed;
 
-if abs(ori_x - x) > room_width + sprite_width {
+if abs(ori_x - x) > room_width + sprite_width*2 + 100 {
 	instance_destroy();	
 }
 

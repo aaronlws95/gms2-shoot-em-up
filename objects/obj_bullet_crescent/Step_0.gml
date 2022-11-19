@@ -12,3 +12,5 @@ else {
 	_is_turn_back = true
 	direction = point_direction(x, y, obj_player.x, obj_player.y)
 }
+
+event_inherited();

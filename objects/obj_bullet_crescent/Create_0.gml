@@ -5,7 +5,9 @@ _max_speed = 8
 _cur_speed = _max_speed
 
 damage = 3;
-shoot_delay = 30
+shoot_delay = 50
 
 effect_create_below(ef_ring, x, y, 0.05, c_white);
 audio_play_sound(snd_shoot_bullet_01, 10, false);
+
+event_inherited()

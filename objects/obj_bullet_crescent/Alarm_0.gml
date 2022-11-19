@@ -1,0 +1,1 @@
+can_damage = true

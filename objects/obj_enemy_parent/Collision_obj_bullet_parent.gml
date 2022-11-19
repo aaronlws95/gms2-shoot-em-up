@@ -8,20 +8,29 @@ if _hp <= 0 {
 	instance_destroy();		
 }
 
-switch other.object_index {
-	case obj_bullet_crescent: 
-		other.can_damage = false
-		other.alarm[0] = 3
-		break;
-	case obj_bullet_cannon:
-		if other.can_damage {
-			effect_create_below(ef_spark, other.x, other.y, 0.25, c_white)
-			other.direction += random_range(140, 220)
-			other.can_damage = false
-		}
-		break;
-	case obj_bullet_01:
-	default:
-		instance_destroy();
-		break;
+with (other) {
+	switch object_index {
+		case obj_bullet_crescent: 
+			can_damage = false
+			alarm[0] = 3
+			break;
+		case obj_bullet_cannon:
+			if can_damage {
+				effect_create_below(ef_spark, x, y, 0.25, c_white)
+				direction += random_range(140, 220)
+				can_damage = false
+				alarm[1] = 3
+			}
+			break;
+		case obj_bullet_laser:
+			if can_damage {
+				can_damage = false	
+				alarm[0] = 10
+			}
+			break;
+		case obj_bullet_01:
+		default:
+			instance_destroy();
+			break;
+	}
 }

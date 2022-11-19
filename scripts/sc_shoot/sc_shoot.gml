@@ -82,21 +82,44 @@ function shoot_obj_bullet_crescent(_x, _y, _image_angle, level) {
 	}	
 }
 
+function shoot_obj_bullet_laser(_x, _y, _image_angle, level) {
+	switch(level) {
+		default:
+		case 0:
+			bullet_inst = instance_create_layer(_x, _y, "Instances", bullet_obj, {
+													sprite_index: sp_bullet_laser
+												});
+			break;
+		case 1:
+			bullet_inst = instance_create_layer(_x, _y, "Instances", bullet_obj, {
+													sprite_index: sp_bullet_laser_lvl1
+												});
+			break;
+		case 2:
+			bullet_inst = instance_create_layer(_x, _y, "Instances", bullet_obj, {
+													sprite_index: sp_bullet_laser_lvl2
+												});		
+			break;
+	}		
+}
+
 function shoot(_x, _y, _image_angle, bullet_obj, level){
 	switch(bullet_obj) {
 		case obj_bullet_cannon:
 			shoot_obj_bullet_cannon(_x, _y, _image_angle, level)
 			break		
 		
-		case obj_bullet_01:
-			default:
-			shoot_obj_bullet_01(_x, _y, _image_angle, level)
+		case obj_bullet_laser:
+			shoot_obj_bullet_laser(_x, _y, _image_angle, level)
 			break
-			
+		
 		case obj_bullet_crescent:
-			default:
 			shoot_obj_bullet_crescent(_x, _y, _image_angle, level)
 			break			
-			
+
+		case obj_bullet_01:
+		default:
+			shoot_obj_bullet_01(_x, _y, _image_angle, level)
+			break
 	}
 }

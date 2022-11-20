@@ -1,5 +1,3 @@
-
-
 if other.can_damage {
 	_flash_alpha = 1;
 	_hp -= other.damage;

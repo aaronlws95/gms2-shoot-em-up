@@ -6,4 +6,7 @@ _flash_alpha = 0;
 
 ori_x = x
 
+is_shoot = false
+_has_shot = false 
+
 event_inherited();

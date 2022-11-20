@@ -1,0 +1,2 @@
+ds_map_destroy(_wave_duration)
+ds_map_destroy(_wave_spawner)

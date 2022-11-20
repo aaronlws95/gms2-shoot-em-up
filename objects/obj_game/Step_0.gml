@@ -1,10 +1,6 @@
-_reset = keyboard_check(ord("R"));
-_exit = keyboard_check(vk_escape);
+_menu = keyboard_check(vk_escape);
 
-if _reset {
-	game_restart();	
-}
-
-if _exit {
-	game_end();	
+if _menu and room != rm_title_screen {
+	instance_deactivate_all(false)
+	instance_create_layer(x, y, "Instances", obj_escape_menu)
 }

@@ -12,8 +12,8 @@ for (i = 0 ; i < _max_length; i++) {
 	
 	enemy = collision_point(_x_end, _y_end, obj_enemy_parent, 0, 0)
 	if (enemy) {
-		part_particles_create(obj_particle.particle_system, _x_end, _y_end, obj_particle.particle_type_hit, 1);
-		part_particles_create(obj_particle.particle_system, _x_end, _y_end, obj_particle.particle_type_spark, 5);
+		part_particles_create(obj_particle.particle_system, _x_end, _y_end, obj_particle.particle_type_laser_hit, 1);
+		part_particles_create(obj_particle.particle_system, _x_end, _y_end, obj_particle.particle_type_laser_spark, 5);
 		break;	
 	}
 }

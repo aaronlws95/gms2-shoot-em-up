@@ -5,10 +5,10 @@ image_angle = point_direction(x, y, mouse_x, mouse_y)
 
 var _up, _down, _left, _right, _shoot;
 
-_up = keyboard_check(ord("W")) or keyboard_check(vk_up);
-_down = keyboard_check(ord("S")) or keyboard_check(vk_down);
-_right = keyboard_check(ord("D")) or keyboard_check(vk_right);
-_left = keyboard_check(ord("A")) or keyboard_check(vk_left);
+_up = keyboard_check(global.bind_up)
+_down = keyboard_check(global.bind_down)
+_right = keyboard_check(global.bind_right)
+_left = keyboard_check(global.bind_left)
 _shoot = mouse_check_button_pressed(mb_left)
 _shoot_hold = mouse_check_button(mb_left)
 _h_move = _right - _left;
@@ -65,4 +65,8 @@ else {
 	if instance_exists(obj_bullet_laser) {
 		instance_destroy(obj_bullet_laser)
 	}
+}
+
+if _flash_alpha > 0 {
+	_flash_alpha -= 0.05;	
 }

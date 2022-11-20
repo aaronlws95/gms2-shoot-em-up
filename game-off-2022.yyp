@@ -66,7 +66,7 @@
     {"id":{"name":"obj_escape_menu","path":"objects/obj_escape_menu/obj_escape_menu.yy",},"order":0,},
     {"id":{"name":"sp_laser_hit","path":"sprites/sp_laser_hit/sp_laser_hit.yy",},"order":0,},
     {"id":{"name":"snd_bullet_pickup_01","path":"sounds/snd_bullet_pickup_01/snd_bullet_pickup_01.yy",},"order":3,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
@@ -81,7 +81,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"roomId":{"name":"rm_high_score","path":"rooms/rm_high_score/rm_high_score.yy",},},
   ],

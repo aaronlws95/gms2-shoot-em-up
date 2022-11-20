@@ -6,6 +6,10 @@ accept_key = keyboard_check_pressed(vk_enter)
 
 op_length = array_length(option[menu_level])
 
+if up_key or down_key {
+	audio_play_sound(snd_choose_menu, 10, false)	
+}
+
 pos += down_key - up_key
 
 if pos >= op_length {

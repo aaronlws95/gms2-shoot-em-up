@@ -4,6 +4,10 @@ accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter
 
 op_length = array_length(option[menu_level])
 
+if up_key or down_key {
+	audio_play_sound(snd_choose_menu, 10, false)	
+}
+
 pos += down_key - up_key
 
 if pos >= op_length {
@@ -22,11 +26,11 @@ if accept_key {
 	case 0:
 		switch pos {
 			case 0:
-				room_goto(rm_title_screen)
+				instance_activate_all()
+				instance_destroy();			
 				break;
 			case 1: 
-				instance_activate_all()
-				instance_destroy();
+				room_goto(rm_title_screen)
 				break;
 		}
 		break;

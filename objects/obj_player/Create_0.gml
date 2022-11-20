@@ -14,7 +14,7 @@ bullet_level = 0
 _flash_color = c_white;
 _flash_alpha = 0;
 
-_hp = 3
+_hp = 1
 _is_hit = false
 
 global.player_score = 0

@@ -37,6 +37,9 @@ if accept_key {
 				menu_level = 1
 				break;
 			case 2: 
+				room_goto(rm_high_score)
+				break;				
+			case 3: 
 				game_end();
 				break;
 		}

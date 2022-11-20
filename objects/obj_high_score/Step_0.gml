@@ -13,6 +13,5 @@ if(keyboard_lastkey != -1 and keyboard_check_pressed(vk_backspace))
 }
 
 if keyboard_check_pressed(vk_enter) {
-	array_push(global.high_scores, {player_name: name, player_score: global.player_score})
 	room_goto(rm_title_screen)	
 }

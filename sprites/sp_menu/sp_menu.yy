@@ -93,6 +93,6 @@
   },
   "parent": {
     "name": "Menu",
-    "path": "folders/Menu.yy",
+    "path": "folders/Sprites/Menu.yy",
   },
 }

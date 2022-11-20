@@ -4,3 +4,7 @@ global.bind_down = ord("S")
 global.bind_right = ord("D")
 global.bind_left = ord("A")
 global.player_score = 0
+
+global.high_scores = []
+array_push(global.high_scores, {player_name: "Peter", player_score: 9643});
+array_push(global.high_scores, {player_name: "Ming", player_score: 3597});

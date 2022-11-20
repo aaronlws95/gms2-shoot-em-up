@@ -18,7 +18,6 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2DBE8461","properties":[],"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":160.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_C3C3C1","properties":[],"isDnd":false,"objectId":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":580.0,"y":144.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_31ED016E","properties":[],"isDnd":false,"objectId":{"name":"obj_bullet_pickup_spawner","path":"objects/obj_bullet_pickup_spawner/obj_bullet_pickup_spawner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_564074A1","properties":[],"isDnd":false,"objectId":{"name":"obj_particle","path":"objects/obj_particle/obj_particle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_47A4F828","properties":[],"isDnd":false,"objectId":{"name":"obj_spawn_manager","path":"objects/obj_spawn_manager/obj_spawn_manager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":192.0,},
@@ -32,7 +31,6 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_2DBE8461","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_C3C3C1","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_31ED016E","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_564074A1","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_47A4F828","path":"rooms/Room1/Room1.yy",},

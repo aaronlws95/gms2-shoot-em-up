@@ -9,4 +9,6 @@ ori_x = x
 is_shoot = false
 _has_shot = false 
 
+enemy_score = 50
+
 event_inherited();

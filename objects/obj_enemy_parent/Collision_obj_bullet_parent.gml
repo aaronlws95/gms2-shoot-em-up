@@ -2,9 +2,7 @@ if other.can_damage {
 	_flash_alpha = 1;
 	_hp -= other.damage;
 }
-if _hp <= 0 {
-	instance_destroy();		
-}
+
 
 with (other) {
 	switch object_index {

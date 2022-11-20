@@ -6,6 +6,3 @@ if not _is_hit {
 	audio_play_sound(snd_hit_player, 10, false);
 }
 
-if _hp <= 0 {
-	room_goto(rm_title_screen)	
-}

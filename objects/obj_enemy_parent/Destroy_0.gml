@@ -1,0 +1,1 @@
+global.player_score += enemy_score

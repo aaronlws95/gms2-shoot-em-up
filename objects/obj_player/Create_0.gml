@@ -16,3 +16,5 @@ _flash_alpha = 0;
 
 _hp = 3
 _is_hit = false
+
+global.player_score = 0

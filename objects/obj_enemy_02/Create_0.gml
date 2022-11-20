@@ -9,4 +9,6 @@ ori_x = x
 path_start(choose(path_enemy_02_0, path_enemy_02_1),
 			_h_speed, path_action_stop, true)
 
+enemy_score = 100
+
 event_inherited();

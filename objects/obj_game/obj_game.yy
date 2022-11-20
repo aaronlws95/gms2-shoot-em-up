@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_settings",
+  "name": "obj_game",
   "spriteId": null,
   "solid": false,
   "visible": true,

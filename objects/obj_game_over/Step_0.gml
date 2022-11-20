@@ -14,5 +14,12 @@ if(keyboard_lastkey != -1 and keyboard_check_pressed(vk_backspace))
 
 if keyboard_check_pressed(vk_enter) {
 	array_push(global.high_scores, {player_name: name, player_score: global.player_score})
+	
+	save_string = json_stringify(global.high_scores)
+	buffer = buffer_create(string_byte_length(save_string) + 1, buffer_fixed, 1)
+	buffer_write(buffer, buffer_string, save_string)
+	buffer_save(buffer, "highscores.save")
+	buffer_delete(buffer)
+	
 	room_goto(rm_title_screen)	
 }
